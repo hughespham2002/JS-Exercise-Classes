@@ -43,7 +43,6 @@ class Airplane {
 
 class Person {
   constructor(traits){
-    
     this.name = traits.name;
     this.age = traits.age;
     this.stomach =[];
@@ -109,7 +108,7 @@ class Lambdasian {
   constructor(bio) {
     this.name = bio.name;
     this.age = bio.age;
-    this.location = bio.location
+    this.location = bio.location;
   }
   speak() {
     return `Hello my name is ${this.name}, I am from ${this.location}.`
@@ -167,12 +166,14 @@ class Student extends Lambdasian {
     this.favSubjects = about.favSubjects;
    }
    listSubjects() {
-
+    return `Loving ${this.favSubjects}`;
    }
-   PRAssignment() {
-
+   PRAssignment(subject) {
+    return `${this.name} has submitted a PR for ${subject}`;
    }
-   sprintChallenge
+   sprintChallenge(subject) {
+    return `${this.name} has begun sprint challenge on ${subject}`
+   }
 }
 
 /*
@@ -195,10 +196,10 @@ class ProjectManager extends Instructor{
     this.favInstructor = edu.favInstructor;
   }
   standUp(slack) {
-    return `${name} debugs ${student.name}'s code on ${subject}`;
+    return `${this.name} announces to ${this.channel}, @channel standy times!`;
   }
-  debugsCode(subject) {
-    return `${name} debugs ${student.name}'s code on ${subject}`;
+  debugsCode(student, subject) {
+    return `${this.name} debugs ${student.name}'s code on ${subject}`;
   }
 }
 /*
