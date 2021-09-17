@@ -42,9 +42,9 @@ class Airplane {
 */
 
 class Person {
-  constructor(traits){
-    this.name = traits.name;
-    this.age = traits.age;
+  constructor(name, age){
+    this.name = name;
+    this.age = age;
     this.stomach = [];
   }
   eat(edible) {
@@ -74,9 +74,9 @@ class Person {
 */
 
 class Car {
-  constructor(specs) {
-    this.model = specs.model;
-    this.milesPerGallon = specs.milesPerGallon;
+  constructor(model, milesPerGallon) {
+    this.model = model;
+    this.milesPerGallon = milesPerGallon;
     this.tank = 0;
     this.odometer = 0;
   }
@@ -139,8 +139,8 @@ class Instructor extends Lambdasian{
   demo(subject) {
     return `Today we are learning about ${subject}`;
   }
-  grade(subject, student) {
-    return `${this.name} receives a perfect score on ${subject}`;
+  grade(student, subject) {
+    return `${student.name} receives a perfect score on ${subject}`;
   }
 }
 /*
