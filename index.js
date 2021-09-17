@@ -45,7 +45,7 @@ class Person {
   constructor(traits){
     this.name = traits.name;
     this.age = traits.age;
-    this.stomach =[];
+    this.stomach = [];
   }
   eat(edible) {
     if(this.stomach.length < 10) 
@@ -83,7 +83,7 @@ class Car {
   fill(gallons) {
     this.tank += gallons;
   }
-  drive(distance) {
+  drive(distance){
     this.odometer = this.odometer + Math.min(distance / this.milesPerGallon, this.tank) * this.milesPerGallon;
     this.tank = this.tank - Math.min(distance / this.milesPerGallon, this.tank);
     if(this.tank<=0){
@@ -195,8 +195,8 @@ class ProjectManager extends Instructor{
     this.gradClassName = edu.gradClassName;
     this.favInstructor = edu.favInstructor;
   }
-  standUp(slack) {
-    return `${this.name} announces to ${this.channel}, @channel standy times!`;
+  standUp(channel) {
+    return `${this.name} announces to ${channel}, @channel standy times!`;
   }
   debugsCode(student, subject) {
     return `${this.name} debugs ${student.name}'s code on ${subject}`;
